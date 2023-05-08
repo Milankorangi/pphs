@@ -1,8 +1,18 @@
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+
 function App() {
   return (
-    <div>
-      <p>Patient Portals for Healthcare Services</p>
-    </div>
+    <Box
+      sx={{
+        padding: "8px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Typography>Patient Portals for Healthcare Services</Typography>
+    </Box>
   );
 }
 

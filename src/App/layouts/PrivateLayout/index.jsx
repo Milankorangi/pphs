@@ -24,7 +24,9 @@ const PrivateLayout = ({ children }) => {
     // </Drawer>
     <>
       <Navbar />
-      <Container maxWidth="lg">{children}</Container>
+      <Container maxWidth="lg" sx={{ my: 3 }}>
+        {children}
+      </Container>
     </>
   );
 };

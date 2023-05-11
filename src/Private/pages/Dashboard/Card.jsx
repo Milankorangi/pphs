@@ -4,8 +4,13 @@ import Box from "@mui/material/Box";
 import MuiCard from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import SwitchAccountIcon from "@mui/icons-material/SwitchAccount";
 import Typography from "@mui/material/Typography";
+
+const Container = styled(Box)(({ theme }) => ({
+  [theme.breakpoints.down("sm")]: {
+    maxWidth: "100%",
+  },
+}));
 
 const Card = styled(MuiCard)(({ theme }) => ({
   "&:hover": {
@@ -17,7 +22,7 @@ const Card = styled(MuiCard)(({ theme }) => ({
 
 export default function OutlinedCard({ data }) {
   return (
-    <Box
+    <Container
       sx={{
         minWidth: 275,
         maxWidth: 300,
@@ -58,6 +63,6 @@ export default function OutlinedCard({ data }) {
           </Typography>
         </CardActions>
       </Card>
-    </Box>
+    </Container>
   );
 }

@@ -22,7 +22,7 @@ function TopBar() {
     >
       <img src={image} alt="logo" style={{ width: "96px" }} />
       <MuiTypography>Patient Portals for Healthcare Services</MuiTypography>
-      <Typography sx={{ color: "#fff" }}>Right</Typography>
+      <Typography sx={{ color: "#fff" }}>R</Typography>
     </Container>
   );
 }

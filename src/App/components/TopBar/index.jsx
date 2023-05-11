@@ -7,6 +7,7 @@ import image from "../../../assets/PPHS.png";
 const MuiTypography = styled(Typography)(({ theme }) => ({
   fontSize: "20px",
   fontWeight: 500,
+  textAlign: "center",
 }));
 
 function TopBar() {

@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 const Container = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     maxWidth: "100%",
+    padding: theme.spacing(0, 1),
   },
 }));
 
@@ -25,7 +26,7 @@ export default function OutlinedCard({ data }) {
     <Container
       sx={{
         minWidth: 275,
-        maxWidth: 300,
+        maxWidth: 350,
         "& .MuiPaper-root.MuiCard-root": {
           minHeight: 160,
           backgroundColor: "#F7F8FD",

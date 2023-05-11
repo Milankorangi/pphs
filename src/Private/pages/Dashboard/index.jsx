@@ -55,7 +55,7 @@ const lists = [
 
 function Dashboard() {
   return (
-    <MuiGrid container spacing={2}>
+    <MuiGrid container spacing={3}>
       {lists.map((list) => (
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <Card key={list.id} data={list} />

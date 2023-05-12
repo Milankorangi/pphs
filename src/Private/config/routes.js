@@ -10,6 +10,7 @@ import RefillPrescriptions from "Private/pages/RefillPrescriptions";
 import OnlinePayment from "Private/pages/OnlinePayment";
 import InteractiveEducation from "Private/pages/InteractiveEducation";
 import CommunityResources from "Private/pages/CommunityResources";
+import Contact from "Private/pages/Contact";
 
 const privateRoutes = [
   { path: "/", component: <Dashboard /> },
@@ -20,6 +21,7 @@ const privateRoutes = [
   { path: "/online-payment", component: <OnlinePayment /> },
   { path: "/interactive-education", component: <InteractiveEducation /> },
   { path: "/community-resources", component: <CommunityResources /> },
+  { path: "/contact", component: <Contact /> },
 ];
 
 export default privateRoutes;

@@ -17,6 +17,8 @@ import Divider from "@mui/material/Divider";
 import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
 
+import { useNavigate } from "react-router-dom";
+
 const DropButton = styled(IconButton)(({ theme }) => ({
   "&:hover": {
     background: "transparent",
@@ -29,13 +31,31 @@ const Button = styled(MuiButton)(({ theme }) => ({
   },
 }));
 
-const pages = ["Home", "My Account", "Contact"];
+const pages = [
+  {
+    id: 1,
+    link: "/",
+    name: "Home",
+  },
+  {
+    id: 2,
+    link: "/my-account",
+    name: "My Account",
+  },
+  {
+    id: 3,
+    link: "/contact",
+    name: "Contact",
+  },
+];
 
 function Navbar() {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -112,8 +132,8 @@ function Navbar() {
               anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page?.id} onClick={() => navigate(page?.link)}>
+                  <Typography textAlign="center">{page?.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -121,12 +141,12 @@ function Navbar() {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page?.id}
                 disableRipple
-                onClick={handleCloseNavMenu}
+                onClick={() => navigate(page?.link)}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                {page?.name}
               </Button>
             ))}
           </Box>

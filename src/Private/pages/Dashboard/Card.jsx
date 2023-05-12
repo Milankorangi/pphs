@@ -6,6 +6,8 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
+import { useNavigate } from "react-router-dom";
+
 const Container = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     maxWidth: "100%",
@@ -22,6 +24,8 @@ const Card = styled(MuiCard)(({ theme }) => ({
 }));
 
 export default function OutlinedCard({ data }) {
+  const navigate = useNavigate();
+
   return (
     <Container
       sx={{
@@ -56,6 +60,7 @@ export default function OutlinedCard({ data }) {
           alignItems: "center",
           justifyContent: "center",
         }}
+        onClick={() => navigate(data?.link)}
       >
         <CardContent>{data?.icon}</CardContent>
         <CardActions>

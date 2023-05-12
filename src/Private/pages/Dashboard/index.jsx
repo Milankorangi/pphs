@@ -18,36 +18,43 @@ const MuiGrid = styled(Grid)(({ theme }) => ({
 const lists = [
   {
     id: 1,
+    link: "/my-account",
     name: "My Account",
     icon: <SwitchAccountIcon sx={{ fontSize: "55px" }} />,
   },
   {
-    id: 3,
+    id: 2,
+    link: "/schedule-appointment",
     name: "Schedule Appointments",
     icon: <EventBusyIcon sx={{ fontSize: "55px" }} />,
   },
   {
-    id: 2,
+    id: 3,
+    link: "/medical-records",
     name: "Medical Records",
     icon: <ContentPasteIcon sx={{ fontSize: "55px" }} />,
   },
   {
     id: 4,
+    link: "/refill-prescriptions",
     name: "Refill Prescriptions",
     icon: <EditNoteIcon sx={{ fontSize: "55px" }} />,
   },
   {
     id: 5,
+    link: "/online-payment",
     name: "Online Payment",
     icon: <PaymentIcon sx={{ fontSize: "55px" }} />,
   },
   {
     id: 6,
+    link: "/interactive-education",
     name: "Interactive Education",
     icon: <CastForEducationIcon sx={{ fontSize: "55px" }} />,
   },
   {
     id: 7,
+    link: "/community-resources",
     name: "Community Resources",
     icon: <Diversity3Icon sx={{ fontSize: "55px" }} />,
   },

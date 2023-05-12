@@ -3,6 +3,8 @@ import { styled } from "@mui/system";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import image from "../../../assets/PPHS.png";
+import moment from "moment";
+import { Box } from "@mui/material";
 
 const MuiTypography = styled(Typography)(({ theme }) => ({
   fontSize: "20px",
@@ -22,8 +24,31 @@ function TopBar() {
       }}
     >
       <img src={image} alt="logo" style={{ width: "96px" }} />
-      <MuiTypography>Patient Portals for Healthcare Services</MuiTypography>
-      <Typography sx={{ color: "#fff" }}>R</Typography>
+      <Box
+        sx={{
+          flex: 1,
+        }}
+      >
+        <MuiTypography>Patient Portals for Healthcare Services</MuiTypography>
+      </Box>
+      <Box
+        sx={{
+          height: "100%",
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "flex-end",
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: "11px",
+            display: { xs: "none", xs: "flex" },
+            color: "#fff",
+          }}
+        >
+          {/* {moment(new Date()).format("DD MMM, YYYY")} */}R
+        </Typography>
+      </Box>
     </Container>
   );
 }

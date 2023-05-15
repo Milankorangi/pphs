@@ -10,6 +10,7 @@ const MuiBox = styled(Box)(({ theme }) => ({
 }));
 
 const MuiGrid = styled(Grid)(({ theme }) => ({
+  padding: "8px",
   alignItems: "center",
   border: "1px solid #e0e0e0",
   borderRadius: "4px",
@@ -49,11 +50,13 @@ function MyAccount() {
                 alt="Remy Sharp"
                 src="https://images.unsplash.com/photo-1639747280804-dd2d6b3d88ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
               />
-              <Typography sx={{ fontSize: "16px", fontWeight: 600 }}>
+              <Typography
+                sx={{ fontSize: "16px", fontWeight: 600, paddingTop: "6px" }}
+              >
                 Jhon Doe
               </Typography>
               <Typography
-                sx={{ fontSize: "14px", fontWeight: 400, opacity: 0.8 }}
+                sx={{ fontSize: "15px", fontWeight: 400, opacity: 0.8 }}
               >
                 jhondoe@gmail.com
               </Typography>
@@ -80,7 +83,7 @@ function MyAccount() {
                   }}
                 >
                   <Typography
-                    sx={{ fontSize: "14px", fontWeight: 500, opacity: 0.8 }}
+                    sx={{ fontSize: "15px", fontWeight: 500, opacity: 0.8 }}
                   >
                     Past
                   </Typography>
@@ -105,7 +108,7 @@ function MyAccount() {
                   }}
                 >
                   <Typography
-                    sx={{ fontSize: "14px", fontWeight: 500, opacity: 0.8 }}
+                    sx={{ fontSize: "15px", fontWeight: 500, opacity: 0.8 }}
                   >
                     Upcomming
                   </Typography>
@@ -125,21 +128,21 @@ function MyAccount() {
               <Box sx={{ display: "flex", flexDirection: "row" }}>
                 <Box sx={{ width: "50%" }}>
                   <Typography
-                    sx={{ fontSize: "15px", fontWeight: 500, opacity: 0.9 }}
+                    sx={{ fontSize: "16px", fontWeight: 500, opacity: 0.9 }}
                   >
                     Gender
                   </Typography>
-                  <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+                  <Typography sx={{ fontSize: "15px", fontWeight: 500 }}>
                     Male
                   </Typography>
                 </Box>
                 <Box>
                   <Typography
-                    sx={{ fontSize: "15px", fontWeight: 500, opacity: 0.9 }}
+                    sx={{ fontSize: "16px", fontWeight: 500, opacity: 0.9 }}
                   >
                     Birthday
                   </Typography>
-                  <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+                  <Typography sx={{ fontSize: "15px", fontWeight: 500 }}>
                     Oct 2, 1992
                   </Typography>
                 </Box>
@@ -149,21 +152,21 @@ function MyAccount() {
               <Box sx={{ display: "flex", flexDirection: "row" }}>
                 <Box sx={{ width: "50%" }}>
                   <Typography
-                    sx={{ fontSize: "15px", fontWeight: 500, opacity: 0.9 }}
+                    sx={{ fontSize: "16px", fontWeight: 500, opacity: 0.9 }}
                   >
                     Phone Number
                   </Typography>
-                  <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+                  <Typography sx={{ fontSize: "15px", fontWeight: 500 }}>
                     0406500666
                   </Typography>
                 </Box>
                 <Box>
                   <Typography
-                    sx={{ fontSize: "15px", fontWeight: 500, opacity: 0.9 }}
+                    sx={{ fontSize: "16px", fontWeight: 500, opacity: 0.9 }}
                   >
                     Address
                   </Typography>
-                  <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+                  <Typography sx={{ fontSize: "15px", fontWeight: 500 }}>
                     15 Terry st, Muscot
                   </Typography>
                 </Box>
@@ -173,21 +176,21 @@ function MyAccount() {
               <Box sx={{ display: "flex", flexDirection: "row" }}>
                 <Box sx={{ width: "50%" }}>
                   <Typography
-                    sx={{ fontSize: "15px", fontWeight: 500, opacity: 0.9 }}
+                    sx={{ fontSize: "16px", fontWeight: 500, opacity: 0.9 }}
                   >
                     City
                   </Typography>
-                  <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+                  <Typography sx={{ fontSize: "15px", fontWeight: 500 }}>
                     Sydney
                   </Typography>
                 </Box>
                 <Box>
                   <Typography
-                    sx={{ fontSize: "15px", fontWeight: 500, opacity: 0.9 }}
+                    sx={{ fontSize: "16px", fontWeight: 500, opacity: 0.9 }}
                   >
                     Zip Code
                   </Typography>
-                  <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+                  <Typography sx={{ fontSize: "15px", fontWeight: 500 }}>
                     2045
                   </Typography>
                 </Box>
@@ -197,21 +200,21 @@ function MyAccount() {
               <Box sx={{ display: "flex", flexDirection: "row" }}>
                 <Box sx={{ width: "50%" }}>
                   <Typography
-                    sx={{ fontSize: "15px", fontWeight: 500, opacity: 0.9 }}
+                    sx={{ fontSize: "16px", fontWeight: 500, opacity: 0.9 }}
                   >
                     Member Status
                   </Typography>
-                  <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+                  <Typography sx={{ fontSize: "15px", fontWeight: 500 }}>
                     Active
                   </Typography>
                 </Box>
                 <Box>
                   <Typography
-                    sx={{ fontSize: "15px", fontWeight: 500, opacity: 0.9 }}
+                    sx={{ fontSize: "16px", fontWeight: 500, opacity: 0.9 }}
                   >
                     Registration Date
                   </Typography>
-                  <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+                  <Typography sx={{ fontSize: "15px", fontWeight: 500 }}>
                     Sep 12, 2022
                   </Typography>
                 </Box>

@@ -20,7 +20,7 @@ function InteractiveEducation() {
       .then((data) => setNews(data?.articles));
   }, []);
 
-  if (news.length > 0) {
+  if (news && news.length > 0) {
     return (
       <>
         <Typography
@@ -36,7 +36,7 @@ function InteractiveEducation() {
         <MuiGrid container spacing={3}>
           {news &&
             news.map((list) => (
-              <Grid item xs={12} sm={6}>
+              <Grid item key={list?.publishedAt} xs={12} sm={6}>
                 <NewsCard data={list} />
               </Grid>
             ))}

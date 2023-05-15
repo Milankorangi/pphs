@@ -52,7 +52,6 @@ const pages = [
 function Navbar() {
   const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -63,25 +62,32 @@ function Navbar() {
     setAnchorEl(null);
   };
 
+  const handleMobileMenu = (link) => {
+    navigate(link);
+    setAnchorElNav(null);
+  };
+
+  const handleMyAccount = (link) => {
+    navigate(link);
+    setAnchorEl(null);
+  };
+
+  const handleLogOut = () => {
+    setAnchorEl(null);
+  };
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
     <AppBar elevation={0} position="static">
       <Container maxWidth="lg">
-        <Toolbar disableRipple disableGutters>
+        <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -132,7 +138,10 @@ function Navbar() {
               anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
             >
               {pages.map((page) => (
-                <MenuItem key={page?.id} onClick={() => navigate(page?.link)}>
+                <MenuItem
+                  key={page?.id}
+                  onClick={() => handleMobileMenu(page?.link)}
+                >
                   <Typography textAlign="center">{page?.name}</Typography>
                 </MenuItem>
               ))}
@@ -230,17 +239,14 @@ function Navbar() {
             transformOrigin={{ horizontal: "right", vertical: "top" }}
             anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
           >
-            <MenuItem onClick={handleClose} sx={{ mr: { xs: 2, md: 4 } }}>
+            <MenuItem
+              onClick={() => handleMyAccount("/my-account")}
+              sx={{ mr: { xs: 2, md: 4 } }}
+            >
               <Avatar /> My account
             </MenuItem>
             <Divider />
-            <MenuItem onClick={handleClose}>
-              <ListItemIcon>
-                <Settings fontSize="small" />
-              </ListItemIcon>
-              Settings
-            </MenuItem>
-            <MenuItem onClick={handleClose}>
+            <MenuItem onClick={() => handleLogOut()}>
               <ListItemIcon>
                 <Logout fontSize="small" />
               </ListItemIcon>
